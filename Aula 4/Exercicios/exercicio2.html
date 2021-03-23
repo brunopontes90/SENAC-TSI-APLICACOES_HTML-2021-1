@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Document</title>
+    <style>
+        @keyframes cores {
+            from {
+                fill: red;
+            }
+            to {
+                fill: black;
+            }
+        }
+        
+        #sine-curve:hover {
+            animation-name: mudacor;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 5;
+            animation-direction: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <svg id="sine" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="590" height="166">
+
+      <title>Sine.svg - a nice plot of the sine function</title>
+            <defs>
+        <!-- pstricks-style arrow, zoom 1.5 -->
+        <marker id="Arrow" refX="2.52" refY="2.25" markerUnits="strokeWidth"
+           markerWidth="6" markerHeight="4.5" orient="auto">
+          <path d="M 2.52 2.25 L 0 4.5 L 6 2.25 L 0 0 z" />
+        </marker>
+      </defs>
+
+
+
+      <rect id="background" x="0" y="0" width="590" height="166" fill="white"/>
+
+      <g transform="translate(293.5, 90.5)">
+        
+        <!-- axes -->
+        <line id="x-axis" x1="-282.5" x2="282.5" y1="0" y2="0" stroke="black"
+           stroke-width="2" stroke-linecap="square" marker-end="url(#Arrow)" />
+        <line id="y-axis" x1="0" x2="0" y1="70.5" y2="-70.5" stroke="black"
+           stroke-width="2" stroke-linecap="square" marker-end="url(#Arrow)" />
+
+        
+        <g id="xlabels" transform="translate(0,25)">
+          <g id="xm2pi" transform="translate(-251.327412,0) scale(0.02,-0.02)">
+            <use xlink:href="#minus" x="-1200" y="0" />
+            <use xlink:href="#two" x="-500" y="0" />
+            <use xlink:href="#pi" x="0" y="0" />
+          </g>
+
+        </g>
+        
+        <g id="ylabels" transform="translate(-8,7)">
+          <g id="y1" transform="translate(0,-40) scale(0.02,-0.02)">
+            <use xlink:href="#one" x="-500" y="0" />
+          </g>
+          <g id="ym1" transform="translate(0,40) scale(0.02,-0.02)">
+            <use xlink:href="#minus" x="-1200" y="0" />
+            <use xlink:href="#one" x="-500" y="0" />
+          </g>
+        </g>
+
+        
+        <g transform="scale(40, -40)">
+            <path id="sine-curve" fill="none" stroke="red"
+               stroke-width="0.1px" stroke-linecap="butt"
+               d="M -6.544985,-0.258819
+                  C -6.457519,-0.174333 -6.370353,-0.087168 -6.283185,0.000000
+                  C -6.081330,0.201855 -5.879645,0.403537 -5.674080,0.572134
+                  C -5.507730,0.708567 -5.340209,0.822210 -5.168055,0.897968
+                  C -5.016988,0.964447 -4.866337,1.000000 -4.712389,1.000000
+                  C -4.558441,1.000000 -4.407790,0.964447 -4.256722,0.897968
+                  C -4.084568,0.822209 -3.917046,0.708566 -3.750695,0.572132
+                  C -3.545131,0.403536 -3.343447,0.201855 -3.141593,0.000000
+                  C -2.939738,-0.201855 -2.738053,-0.403537 -2.532489,-0.572133
+                  C -2.366139,-0.708567 -2.198618,-0.822209 -2.026464,-0.897968
+                  C -1.875396,-0.964447 -1.724745,-1.000000 -1.570796,-1.000000
+                  C -1.416861,-1.000000 -1.266222,-0.964453 -1.115166,-0.897984
+                  C -0.942986,-0.822220 -0.775441,-0.708560 -0.609067,-0.572102
+                  C -0.403515,-0.403513 -0.201843,-0.201843 0.000000,0.000000
+                  C 0.201843,0.201843 0.403515,0.403513 0.609067,0.572102
+                  C 0.775441,0.708560 0.942986,0.822220 1.115166,0.897984
+                  C 1.266222,0.964453 1.416861,1.000000 1.570796,1.000000
+                  C 1.724745,1.000000 1.875396,0.964447 2.026464,0.897968
+                  C 2.198618,0.822209 2.366139,0.708567 2.532489,0.572133
+                  C 2.738053,0.403537 2.939738,0.201855 3.141593,0.000000
+                  C 3.343447,-0.201855 3.545131,-0.403536 3.750695,-0.572132
+                  C 3.917046,-0.708566 4.084568,-0.822209 4.256722,-0.897968
+                  C 4.407790,-0.964447 4.558441,-1.000000 4.712389,-1.000000
+                  C 4.866337,-1.000000 5.016988,-0.964447 5.168055,-0.897968
+                  C 5.340209,-0.822210 5.507730,-0.708567 5.674080,-0.572134
+                  C 5.879645,-0.403537 6.081330,-0.201855 6.283185,0.000000
+                  C 6.370353,0.087168 6.457519,0.174333 6.544985,0.258819" />
+          </g>
+      </g>
+    </svg>
+
+
+</body>
+
+
+</html>
