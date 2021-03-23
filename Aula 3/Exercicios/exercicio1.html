@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bandeira</title>
+    <script>
+        let band = document.getElementById("franca");
+        let bandeira = band.getContext("2d");
+        bandeira.addColorStop(0, "blue");
+        bandeira.addColorStop(1, "white");
+        band.fillStyle = bandeira;
+        band.fillRect(10, 10, 150, 80);
+    </script>
+</head>
+
+<body>
+    <div>
+        <canvas id="franca" width="600" height="300" style="border: 1px solid black"></canvas>
+    </div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <canvas id="bandeira" width="450" height="300" style="border:1px solid #d3d3d3;"></canvas>
+
+    <script>
+        //AZUL
+        let azul = document.getElementById("bandeira");
+        let contexto1 = azul.getContext("2d");
+        // Create gradient
+        let pintar1 = contexto1.createLinearGradient(0, 0, 200, 0);
+        pintar1.addColorStop(0, "blue");
+        contexto1.fillStyle = pintar1;
+        contexto1.fillRect(0, 0, 150, 300);
+
+
+        //VERMELHO
+        let vermelho = document.getElementById("bandeira");
+        let contexto2 = azul.getContext("2d");
+        let pintar2 = contexto2.createLinearGradient(0, 0, 200, 0);
+        pintar1.addColorStop(0, "red");
+        contexto1.fillStyle = pintar1;
+        contexto1.fillRect(300, 0, 150, 300);
+    </script>
+
+</body>
+
+</html>
